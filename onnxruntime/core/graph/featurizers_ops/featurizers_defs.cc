@@ -40,6 +40,7 @@ static void RegisterLabelEncoderFeaturizerVer1();
 static void RegisterMaxAbsScalarFeaturizerVer1();
 static void RegisterMinMaxScalarFeaturizerVer1();
 static void RegisterMissingDummiesFeaturizerVer1();
+static void RegisterNumericalizeFeaturizerVer1();
 static void RegisterOneHotEncoderFeaturizerVer1();
 static void RegisterRobustScalarFeaturizerVer1();
 static void RegisterStandardScaleWrapperFeaturizerVer1();
@@ -58,6 +59,7 @@ void RegisterMSFeaturizersSchemas() {
   RegisterMaxAbsScalarFeaturizerVer1();
   RegisterMinMaxScalarFeaturizerVer1();
   RegisterMissingDummiesFeaturizerVer1();
+  RegisterNumericalizeFeaturizerVer1();
   RegisterOneHotEncoderFeaturizerVer1();
   RegisterRobustScalarFeaturizerVer1();
   RegisterStandardScaleWrapperFeaturizerVer1();
@@ -217,112 +219,110 @@ void RegisterDateTimeFeaturizerVer1() {
             const bool has_shape = hasInputShape(ctx, 1);
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_INT32, 0);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 0);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_UINT8, 1);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 1);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_UINT8, 2);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 2);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_UINT8, 3);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 3);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_UINT8, 4);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 4);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_UINT8, 5);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 5);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_UINT8, 6);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 6);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_UINT8, 7);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 7);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_UINT8, 8);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 8);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_UINT8, 9);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 9);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_UINT16, 10);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 10);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_UINT16, 11);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 11);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_UINT8, 12);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 12);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_UINT8, 13);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 13);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_UINT8, 14);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 14);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_INT32, 15);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 15);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_STRING, 16);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 16);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_STRING, 17);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 17);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_STRING, 18);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 18);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_STRING, 19);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 19);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_UINT8, 20);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 20);
             }
-
-          }
-      );
+          });
 }
 
 void RegisterHashOneHotVectorizerFeaturizerVer1() {
@@ -384,22 +384,20 @@ void RegisterHashOneHotVectorizerFeaturizerVer1() {
             const bool has_shape = hasInputShape(ctx, 1);
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_UINT64, 0);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 0);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_UINT8, 1);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 1);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_UINT64, 2);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 2);
             }
-
-          }
-      );
+          });
 }
 
 void RegisterImputationMarkerFeaturizerVer1() {
@@ -577,7 +575,6 @@ void RegisterMaxAbsScalarFeaturizerVer1() {
             if (hasInputShape(ctx, 1)) {
               propagateShapeFromInputToOutput(ctx, 1, 0);
             }
-
           });
 }
 
@@ -688,6 +685,60 @@ void RegisterMissingDummiesFeaturizerVer1() {
           });
 }
 
+void RegisterNumericalizeFeaturizerVer1() {
+  static const char* doc = R"DOC(
+        This is the LabelEncoder, but returns a null value for categories not encountered during training.
+
+        C++-style pseudo signature:
+          template <typename T> std::optional<uint32_t> execute(T const &value);
+
+        Examples:
+          Assuming the training data of ["Oh", "Huh", "Heh"]...
+          execute("Oh") -> std::optional<uint32_t>(1)
+          execute("Huh") -> std::optional<uint32_t>(2)
+          execute("Heh") -> std::optional<uint32_t>(3)
+          # This value was not seeing at training time
+          execute("Oops") -> std::optional<uint32_t>()
+  )DOC";
+
+  MS_FEATURIZERS_OPERATOR_SCHEMA(NumericalizeTransformer)
+      .SinceVersion(1)
+      .SetDomain(kMSFeaturizersDomain)
+      .SetDoc(doc)
+      .Input(
+          0,
+          "State",
+          "State generated during training that is used for prediction",
+          "T0")
+      .Input(
+          1,
+          "Input",
+          "No information is available",
+          "InputT")
+      .Output(
+          0,
+          "Output",
+          "No information is available",
+          "tensor(double)")
+      .TypeConstraint(
+          "T0",
+          {"tensor(uint8)"},
+          "No information is available")
+      .TypeConstraint(
+          "InputT",
+          {"tensor(int8)", "tensor(uint8)", "tensor(int16)", "tensor(uint16)",
+           "tensor(int32)", "tensor(uint32)", "tensor(int64)", "tensor(uint64)",
+           "tensor(float)", "tensor(double)", "tensor(string)"},
+          "No information is available")
+      .TypeAndShapeInferenceFunction(
+          [](ONNX_NAMESPACE::InferenceContext& ctx) {
+            propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_FLOAT, 0);
+            if (hasInputShape(ctx, 1)) {
+              propagateShapeFromInputToOutput(ctx, 1, 0);
+            }
+          });
+}
+
 void RegisterOneHotEncoderFeaturizerVer1() {
   static const char* doc = R"DOC(
         Produces a one hot vector based on categories calculated during training.
@@ -744,22 +795,20 @@ void RegisterOneHotEncoderFeaturizerVer1() {
             const bool has_shape = hasInputShape(ctx, 1);
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_UINT64, 0);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 0);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_UINT8, 1);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 1);
             }
 
             propagateElemTypeFromDtypeToOutput(ctx, ONNX_NAMESPACE::TensorProto_DataType_UINT64, 2);
-            if(has_shape) {
+            if (has_shape) {
               propagateShapeFromInputToOutput(ctx, 1, 2);
             }
-
-          }
-      );
+          });
 }
 
 void RegisterRobustScalarFeaturizerVer1() {
@@ -826,7 +875,6 @@ void RegisterRobustScalarFeaturizerVer1() {
             if (hasInputShape(ctx, 1)) {
               propagateShapeFromInputToOutput(ctx, 1, 0);
             }
-
           });
 }
 
